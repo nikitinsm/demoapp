@@ -1,3 +1,5 @@
+var camera_destinationType;
+
 function onPhotoDataSuccess(imageData){
     var cameraImage = document.getElementById('resultFromCameraImage');
     cameraImage.style.visibility = 'visible';
@@ -16,7 +18,7 @@ function camera_getPicture(){
         ( onPhotoDataSuccess
         , onPhotoDataFail
         , { quality : 30
-          , destinationType: destinationType.DATA_URL
+          , destinationType: camera_destinationType.DATA_URL
           }
         );
 }
